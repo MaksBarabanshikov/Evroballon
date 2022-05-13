@@ -8,6 +8,10 @@
     <title>Evroballon</title>
 </head>
 <body>
+    @@include("chunk/header.html")
+    <h1>title 1234</h1>
+    @@loop("chunk/news-item.html", "../../data/news.json")
 
+    @@include("chunk/footer.html")
 </body>
 </html>

@@ -1,26 +1,84 @@
-$base-font-size: 22px;
-
-@mixin ph {
-    @media (max-width: 700px) {
-        @content;
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
+@import "./imports/*.scss";
 
 body {
-    font-size: 22px;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    background: url(../img/bg.jpg) no-repeat;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: #181818;
+  background-color: #F3F3F3;
+}
 
-    @include ph {
-        color: white;
-        background-color: #000;
-    }
+main {
+  margin-top: 40px;
+}
+
+section {
+  margin-top: 100px;
+}
+
+.container {
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+    font-size: 1rem;
+  }
+}
+
+.h3 {
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.my-btn_light {
+  border: 1px solid #25A1D3;
+  color: #25A1D3;
+  border-radius: 25px;
+
+  &:hover {
+    background-color: #25A1D3;
+    color: #fff;
+  }
+}
+
+.my-btn {
+  background-color: #25A1D3;
+  color: #fff;
+  border-radius: 25px;
+
+  &:hover {
+    border: 1px solid #25A1D3;
+    background-color: transparent;
+    color: #25A1D3!important;
+  }
+}
+
+.border-rounded {
+  border-radius: 25px;
+}
+
+.text-dark {
+  color: #181818;
+}
+
+.text-dark-gray {
+  color: #A6B0B9;
 }
 
 
-@import "block/*.scss";
+ul {
+  list-style: none;
+}
+
+a {
+  color: #181818;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+@import "main/*.scss";

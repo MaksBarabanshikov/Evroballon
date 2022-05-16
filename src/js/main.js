@@ -1,3 +1,6 @@
-const sum = require('./module/sum')
-console.log(sum(2, 10))
-console.log(sum(232, 10))
+import "../../node_modules/bootstrap/dist/js/bootstrap.js"
+import scrollHeader from "./module/scrollHeader";
+import sliderSettings from "./module/sliderSett";
+
+scrollHeader()
+sliderSettings()

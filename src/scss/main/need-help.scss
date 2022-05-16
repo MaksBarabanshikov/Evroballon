@@ -1,0 +1,12 @@
+.need-help {
+    &__block {
+      background-color: #012D5A;
+      border-radius: 10px;
+    }
+
+    &__btn {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 34px;
+    }
+}

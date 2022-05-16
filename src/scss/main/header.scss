@@ -1,0 +1,115 @@
+@function pxToRem($px) {
+  @return $px/16 + rem
+}
+
+@mixin xxl {
+  @media (max-width: 1400px) {
+    @content
+  }
+}
+
+.header {
+  box-shadow: 0px -10px 25px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  @media (max-width: 992px) {
+    background-color: #00A0D4;
+  }
+  &__top {
+    background-color: #012D5A;
+    .container {
+      display: none;
+      @include xxl{
+        font-size: 0.875rem;
+      }
+    }
+  }
+  &__main {
+    &-container {
+      span {
+        font-size: pxToRem(14);
+      }
+      i {
+        font-size: 1.1rem;
+      }
+    }
+    &-btn {
+      font-size: pxToRem(14);
+    }
+    @media (max-width: 992px) {
+      border: none !important;
+    }
+  }
+  &__input {
+    background-color: #F3F3F3;
+    color: #A6B0B9;
+    font-size: 15px;
+    &::placeholder {
+      color: #A6B0B9;
+    }
+    &_btn {
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__list {
+    &-item {
+
+      &_link {
+        font-size: 14px;
+      }
+
+      &_btn {
+        background-color: #25A1D3;
+        color: #fff;
+        border-radius: 25px;
+        font-weight: 400;
+
+        .header__arrow {
+          margin-top: 2px;
+        }
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__mobile {
+    &_btn {
+      border: 1px solid #F3F3F3;
+      color: #fff;
+      font-size: 16px;
+      align-items: center;
+      background-color: transparent;
+
+      @media (max-width: 992px) {
+        max-width: 47px;
+        height: 47px;
+      }
+      @media (max-width: 540px) {
+        max-width: 40px;
+        height: 40px;
+        font-size: 14px;
+      }
+    }
+    &_humb {
+      border: none;
+      background-color: #F3F3F3;
+      color: #00A0D4;
+      font-size: 18px;
+    }
+  }
+
+  &.scrolled {
+    .header__top {
+      display: none;
+    }
+
+    .header__nav {
+      display: none !important;
+    }
+  }
+}
+
+//1060

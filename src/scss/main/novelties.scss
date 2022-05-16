@@ -1,0 +1,66 @@
+.novelties {
+  &__card {
+    border-radius: 10px;
+  }
+
+  &__top {
+    border-radius: 10px;
+    @media(max-width: 992px) {
+      background-color: #F3F3F3;
+    }
+
+    &_discount {
+      left: 0;
+      background-color: #25A1D3;
+      border-radius: 9px;
+      font-size: 11px;
+      @media(max-width: 992px) {
+        top: 10px;
+        left: 10px;
+        font-size: 9px
+      }
+    }
+
+    &_control {
+      right: 0;
+
+      button {
+        border: 1px solid #A6B0B9;
+        color: #A6B0B9;
+        font-size: 19px;
+      }
+    }
+
+    img {
+      @media(max-width: 992px) {
+        max-height: 100px;
+      }
+    }
+  }
+
+  &__content {
+    &_text {
+      @media(max-width: 992px) {
+        font-size: 14px;
+      }
+    }
+
+    &_price {
+      @media(max-width: 992px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__content-btn {
+    button {
+      @media(max-width: 992px) {
+        font-size: 12px;
+      }
+    }
+
+    .my-btn {
+      border-radius: 62px;
+    }
+  }
+}

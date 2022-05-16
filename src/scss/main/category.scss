@@ -1,0 +1,41 @@
+.category {
+  &__main {
+    @media (max-width: 992px) {
+      max-height: 638px;
+    }
+  }
+
+  &__item {
+    background-color: #fff;
+    border-radius: 9px;
+    position: relative;
+
+    &_rect {
+      background-color: #F3F3F3;
+      border-radius: 3px;
+    }
+
+    svg {
+      position: absolute;
+      font-size: 25px;
+      color: #25A1D3;
+      right: 15px;
+    }
+  }
+
+  &__show-more {
+    border-radius: 6px;
+  }
+
+  &__big-card {
+    .col {
+      cursor: pointer;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 9px;
+      max-width: 90%;
+      bottom: 18px;
+      background-color: #fff;
+    }
+  }
+}

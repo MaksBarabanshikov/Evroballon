@@ -1,0 +1,61 @@
+.benefits {
+  &__title {
+    .h3 {
+      @media (max-width: 992px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__card {
+    border-radius: 15px;
+    &_rect {
+      background-color: #F5FCFF;
+      font-size: 40px;
+      color: #25A1D3;
+
+    }
+    &-content {
+      @media (max-width: 768px) {
+        h4 {
+          font-size: 16px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 576px) {
+        h4 {
+          font-size: 14px;
+        }
+        span {
+          display: block;
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+  &__row_big-card {
+    @media (max-width: 992px) {
+      overflow: auto;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__big-card {
+    border-radius: 15px;
+    overflow: hidden;
+    @media (max-width: 992px) {
+      font-size: 14px;
+    }
+
+    .card-img-top {
+      max-height: 130px;
+      height: 100%;
+    }
+
+    ul {
+      list-style: disc;
+    }
+  }
+}

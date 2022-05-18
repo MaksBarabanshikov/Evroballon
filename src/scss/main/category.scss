@@ -3,6 +3,7 @@
     @media (max-width: 992px) {
       max-height: 638px;
     }
+    transition: max-height 0.5s;
   }
 
   &__item {
@@ -36,6 +37,12 @@
       max-width: 90%;
       bottom: 18px;
       background-color: #fff;
+      @media (max-width: 574px) {
+        bottom: 8px;
+        font-size: 14px;
+        padding: 10px !important;
+        line-height: 16px;
+      }
     }
   }
 }

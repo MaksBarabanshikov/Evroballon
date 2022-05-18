@@ -56,7 +56,6 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "bootstrap": "^4.6.1",
     "npm": "^8.10.0"
   }
 }

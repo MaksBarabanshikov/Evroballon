@@ -54,6 +54,9 @@
 
   &__content-btn {
     button {
+      @media (max-width: 1200px) {
+        font-size: 14px;
+      }
       @media(max-width: 992px) {
         font-size: 12px;
       }

@@ -1,0 +1,17 @@
+.news {
+    .news__card {
+      border-radius: 10px;
+      border: none;
+
+      .card-title {
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+      }
+      .card-text {
+        @media (max-width: 1200px) {
+          font-size: 14px;
+        }
+      }
+    }
+}

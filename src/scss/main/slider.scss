@@ -1,79 +1,197 @@
 .big-slider {
   user-select: none;
-  .carousel {
+  .big-slide {
     height: 400px;
+    @media (max-width: 768px) {
+      height: 200px;
+    }
+    @media (max-width: 576px) {
+      height: 150px;
+    }
 
     &-item {
       height: 400px;
+      @media (max-width: 768px) {
+        height: 200px;
+      }
+      @media (max-width: 576px) {
+        height: 150px;
+      }
 
       img {
         height: 100%;
       }
     }
 
-    &-indicators {
-      li {
-        width: 12px;
-        height: 12px;
-        border: none;
-        border-radius: 50%;
-        background-color: #fff;
-        opacity: 1;
-        transition: background-color 0.4s;
-      }
+    .slick {
+      &-dots {
+        bottom: 54px;
 
-      li.active {
-        background-color: #A6B0B9;
-      }
-    }
+        button {
+          &:before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border: none;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 1;
+            transition: background-color 0.4s;
+          }
 
-    &-control-next {
-      &-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background-image: none;
-        font-size: 20px;
-        font-weight: 400;
-        color: #25A1D3;
-      }
-    }
-    &-control-prev {
-      &-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background-image: none;
-        font-size: 20px;
-        font-weight: 400;
-        color: #25A1D3;
-      }
-    }
+        }
 
-    &-control-next,
-    &-control-prev {
-      &:hover {
-        .carousel-control-circle {
-          background-color: #25A1D3;
-          svg {
-            color: white;
+        .slick-active {
+          button:before {
+            background-color: #A6B0B9;
           }
         }
       }
     }
+  }
+}
 
+.slick {
+  &-dots {
+    @media (max-width: 992px) {
+      bottom: 10px!important;
+    }
+  }
+  &-arrow {
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    @media (max-width: 992px) {
+      display: none!important;
+    }
+    &:before {
+      font-size: 50px;
+      color: #25A1D3;
+    }
+  }
+  &-prev {
+    left: 20px;
+  }
+  &-next {
+    right: 20px;
+  }
+}
 
+.slick-response {
+  .slick {
+    &-dots {
+      bottom: -28px;
+      button:before {
+        opacity: 1;
+        color: #A6B0B9;
+        font-size: 8px;
 
-    &-control-circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      }
+      .slick-active {
+        button:before {
+          color: #25A1D3;
+
+        }
+      }
+    }
+    &-arrow {
       width: 50px;
       height: 50px;
+      z-index: 1000;
       border-radius: 50%;
-      background-color: #fff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      transition: 0.25s ease-in-out;
+      &:before {
+        font-size: 50px;
+        opacity: 1;
+        color: #25A1D3;
+      }
+    }
+    &-prev {
+      left: 20px;
+    }
+    &-next {
+      right: 20px;
+    }
+  }
+
+}
+
+.slick__mobile {
+  .slick {
+    &-dots {
+      position: static;
+      button {
+        &:before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          border: none;
+          border-radius: 50%;
+          background-color: #fff;
+          opacity: 1;
+          transition: background-color 0.4s;
+        }
+
+      }
+
+      .slick-active {
+        button:before {
+          background-color: #A6B0B9;
+        }
+      }
+    }
+  }
+}
+
+.slick__novelties {
+  .slick {
+    &-dots {
+      position: static;
+      button {
+        &:before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          border: none;
+          border-radius: 50%;
+          background-color: #fff;
+          opacity: 1;
+          transition: background-color 0.4s;
+        }
+
+      }
+
+      .slick-active {
+        button:before {
+          background-color: #A6B0B9;
+        }
+      }
+    }
+  }
+}
+
+.slick__reviews {
+  .slick {
+    &-dots {
+      position: static;
+      button {
+        &:before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          border: none;
+          border-radius: 50%;
+          background-color: #fff;
+          opacity: 1;
+          transition: background-color 0.4s;
+        }
+
+      }
+
+      .slick-active {
+        button:before {
+          background-color: #A6B0B9;
+        }
+      }
     }
   }
 }

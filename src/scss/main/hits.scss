@@ -1,0 +1,9 @@
+.hits {
+  margin-bottom: 100px;
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+  &__item {
+    border-radius: 10px;
+  }
+}

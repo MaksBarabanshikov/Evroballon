@@ -1,0 +1,32 @@
+.banner-stock {
+  .banner-stock__form {
+    border-radius: 10px;
+    background-color: #012D5A;
+    &_title {
+      font-size: 18px;
+    }
+    &_text {
+      font-size: 12px;
+    }
+    &_input {
+      outline: none;
+      max-height: 60px;
+      @media (max-width: 768px) {
+        max-height: 40px;
+      }
+      &-sub {
+        font-size: 12px;
+        color: #5883AF;
+        bottom: -15px;
+        padding: 0;
+      }
+    }
+    &_submit {
+      max-height: 60px;
+      @media (max-width: 768px) {
+        padding: 13px 0;
+        max-height: 40px;
+      }
+    }
+  }
+}

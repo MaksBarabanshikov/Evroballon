@@ -1,0 +1,19 @@
+.reviews {
+  &__card {
+    border-radius: 10px;
+    &-top {
+      .reviews__top_rect {
+        background-color: transparent;
+        @media (max-width: 992px) {
+          background-color: #F3F3F3;
+        }
+      }
+    }
+    &-title {
+      @media (max-width: 991px) {
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+}

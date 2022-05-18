@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,24 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Evroballon</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-@@include("chunk/header.html")
-<main class="main" id="main">
-    @@include("chunk/slider.html")
-    @@include("chunk/category.html")
-<!--    hits-->
-    @@include("chunk/hits.html")
-    @@include("chunk/slider.html")
-    @@include("chunk/benefits.html")
-    @@include("chunk/need-help.html")
-    @@include("chunk/novelties.html")
-</main>
+<div class="wrapper">
+    @@include("chunk/header.html")
+    <main class="main" id="main">
+        @@include("chunk/slider.html")
+        @@include("chunk/category.html")
+        @@include("chunk/hits.html")
+        @@include("chunk/slider.html")
+        @@include("chunk/benefits.html")
+        @@include("chunk/need-help.html")
+        @@include("chunk/novelties.html")
+        @@include("chunk/reviews.html")
+        @@include("chunk/news.html")
+        @@include("chunk/banner-stock.html")
+    </main>
+    @@include("chunk/footer.html")
+</div>
 
-<!--<span>loop("chunk/news-item.html", "../../gulpfile.babel.js/data/news.json")</span>-->
-@@include("chunk/footer.html")
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
         integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
         crossorigin="anonymous"></script>

@@ -1,6 +1,12 @@
 function sliderSettings() {
+    const bigSlider = $('.big-slide')
+    const sliderResponse = $('.slick-response')
+    const sliderMobile =  $(".slick__mobile")
+    const sliderNovelties = $('.slick__novelties')
+    const sliderReviews = $('.slick__reviews')
+
     function bigSlide() {
-        $('.big-slide').slick({
+        bigSlider.slick({
             dots: true,
             fade: true,
             lazyLoad: 'ondemand',
@@ -8,11 +14,11 @@ function sliderSettings() {
         })
     }
     function slickResponse() {
-        $('.slick-response').slick({
+        sliderResponse.slick({
             lazyLoad: 'ondemand',
             dots: true,
             slidesToShow: 8,
-            slidesToScroll: 8,
+            slidesToScroll: 1,
             autoplay: true,
             responsive: [
                 {
@@ -20,7 +26,7 @@ function sliderSettings() {
                     settings: {
                         dots: true,
                         slidesToShow: 6,
-                        slidesToScroll: 6,
+                        slidesToScroll: 1,
                     }
                 },
                 {
@@ -28,7 +34,7 @@ function sliderSettings() {
                     settings: {
                         dots: true,
                         slidesToShow: 5,
-                        slidesToScroll: 5
+                        slidesToScroll: 1
                     }
                 },
                 {
@@ -36,7 +42,7 @@ function sliderSettings() {
                     settings: {
                         dots: false,
                         slidesToShow: 4,
-                        slidesToScroll: 4
+                        slidesToScroll: 1
                     }
                 },
                 {
@@ -44,7 +50,7 @@ function sliderSettings() {
                     settings: {
                         dots: false,
                         slidesToShow: 3,
-                        slidesToScroll: 3
+                        slidesToScroll: 1
                     }
                 },
                 {
@@ -52,7 +58,7 @@ function sliderSettings() {
                     settings: {
                         dots: false,
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
                     }
                 }
             ]
@@ -65,22 +71,28 @@ function sliderSettings() {
             adaptiveHeight: true
         }
         $(window).width() <= 992?
-            $(".slick__mobile").slick(settings):
+           sliderMobile.slick(settings):
             null
 
         $(window).resize(function() {
-            if($(window).width() <= 992) {
-                $(".slick__mobile").slick(settings)
-            } else {
-                $('.slick__mobile').slick('unslick')
-                console.log($(".slick__mobile").slick)
+            const slider = document.querySelector('.benefits')
+            if (slider) {
+                if($(window).width() <= 992) {
+                    if (!slider.querySelector('.slick-initialized')) {
+                        sliderMobile.slick(settings)
+                    }
+                } else {
+                    if (slider.querySelector('.slick-initialized')) {
+                        sliderMobile.slick('unslick')
+                    }
+                }
             }
         })
 
 
     }
     function slickNovelties() {
-        $('.slick__novelties').slick({
+        sliderNovelties.slick({
             lazyLoad: 'ondemand',
             dots: false,
             slidesToShow: 4,
@@ -107,7 +119,7 @@ function sliderSettings() {
         })
     }
     function slickReviews() {
-        $('.slick__reviews').slick({
+        sliderReviews.slick({
             lazyLoad: 'ondemand',
             dots: false,
             slidesToShow: 2,
@@ -133,11 +145,25 @@ function sliderSettings() {
         })
     }
 
-    bigSlide()
-    slickResponse()
-    slickMobileBigCard()
-    slickNovelties()
-    slickReviews()
+    if (bigSlider) {
+        bigSlide()
+    }
+
+    if (sliderResponse) {
+        slickResponse()
+    }
+
+    if (sliderMobile) {
+        slickMobileBigCard()
+    }
+
+    if (sliderNovelties) {
+        slickNovelties()
+    }
+
+    if (sliderResponse) {
+        slickReviews()
+    }
 }
 
 export default sliderSettings

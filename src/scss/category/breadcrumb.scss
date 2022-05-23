@@ -1,0 +1,15 @@
+.breadcrumb {
+  &-item + &-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #000;
+    content: "—";
+  }
+  &-item {
+    a {
+      color: #000;
+    }
+  }
+}
+

@@ -62,20 +62,48 @@
   &-arrow {
     width: 50px;
     height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow:0 4px 15px rgba(0, 0, 0, 0.05);
     z-index: 1000;
+    transition: background-color 0.2s linear;
     @media (max-width: 992px) {
       display: none!important;
     }
     &:before {
-      font-size: 50px;
+      transition: color 0.2s linear;
+      font-size: 20px;
       color: #25A1D3;
+      font-weight: 900;
+    }
+    
+    &:hover {
+      background-color: #25A1D3;
+      &::before {
+        color: #fff;
+      }
+    }
+
+    &:focus {
+      background-color: #25A1D3;
+      &::before {
+        color: #fff;
+      }
     }
   }
   &-prev {
     left: 20px;
+    &::before {
+      content: '\f104';
+      font-family: 'Font Awesome 5 Free';
+    }
   }
   &-next {
     right: 20px;
+    &::before {
+      content: '\f105';
+      font-family: 'Font Awesome 5 Free';
+    }
   }
 }
 
@@ -92,29 +120,10 @@
       .slick-active {
         button:before {
           color: #25A1D3;
-
         }
       }
     }
-    &-arrow {
-      width: 50px;
-      height: 50px;
-      z-index: 1000;
-      border-radius: 50%;
-      &:before {
-        font-size: 50px;
-        opacity: 1;
-        color: #25A1D3;
-      }
-    }
-    &-prev {
-      left: 20px;
-    }
-    &-next {
-      right: 20px;
-    }
   }
-
 }
 
 .slick__mobile {

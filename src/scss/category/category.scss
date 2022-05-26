@@ -59,16 +59,17 @@
     }
   }
 
-  &__filter_btn {
-    button {
-      border-radius: 9px;
-    }
-  }
-
   &__filter {
     display: none;
+    width: 100%;
     @media (min-width: 992px) {
       display: block;
+      width: 267px;
+    }
+
+
+    &_border {
+      border-bottom: 1px solid #E1F0FE;
     }
 
     &_body {
@@ -97,6 +98,12 @@
 
     .rotate {
       transform: rotate(-180deg);
+    }
+
+    &_btn {
+      button {
+        border-radius: 9px;
+      }
     }
   }
 

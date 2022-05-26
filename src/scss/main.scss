@@ -14,9 +14,9 @@ body {
 }
 
 main {
-  margin-top: 40px;
+  margin-top: 209px;
   @media (max-width: 992px) {
-    margin-top: 30px;
+    margin-top: 130px;
   }
 }
 
@@ -130,3 +130,4 @@ a {
 
 @import "main/*.scss";
 @import "category/*.scss";
+@import "product-card/*.scss";

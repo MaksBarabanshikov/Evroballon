@@ -4,7 +4,7 @@ function categoryDropItem() {
     if (categoryTitle) {
         categoryTitle.on('click',function () {
             const dropElem = $(this).next()
-            dropElem.toggle("visible")
+            dropElem.slideToggle()
             $(this).children().toggleClass('rotate')
         })
     }

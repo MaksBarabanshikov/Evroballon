@@ -10,17 +10,34 @@
     background-color: #fff;
     border-radius: 9px;
     position: relative;
-
+    transition: color 0.15s linear;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
     &_rect {
       background-color: #F3F3F3;
       border-radius: 3px;
+
+      img {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        padding: 4px !important;
+        max-width: 42px;
+        max-height: 42px;
+      }
     }
 
-    svg {
+    i {
       position: absolute;
-      font-size: 25px;
+      font-size: 20px;
       color: #25A1D3;
       right: 15px;
+    }
+
+    &:hover {
+      color: #25A1D3;
     }
   }
 

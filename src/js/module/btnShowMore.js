@@ -3,12 +3,12 @@ function btnShowMore() {
     if (btn) {
         btn.click(function () {
             let main = $(".category__main ")
-            if ( main.height() === 638) {
-                main.css({"maxHeight": "2000px"})
-                btn.text("Скрыть")
-            } else {
-                main.css({"maxHeight": "638px"})
+            if ( main.hasClass('category__main_hidden')) {
                 btn.text("Показать больше")
+                main.removeClass("category__main_hidden")
+            } else {
+                main.addClass('category__main_hidden')
+                btn.text("Скрыть")
             }
         })
     }

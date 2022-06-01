@@ -1,0 +1,69 @@
+.article {
+  h1 {
+    font-size: 28px;
+  }
+  &__head {
+    border-radius: 9px;
+    font-size: 14px;
+    a {
+      color: #00A0D4;
+      font-size: 14px;
+    }
+  }
+  &__body {
+    &_main {
+     border-radius: 9px;
+    }
+    &_container {
+      max-width: 700px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    &_table {
+      border-radius: 9px;
+      border-color: #A6B0B9!important;
+
+      .row, .col {
+        border-color: #A6B0B9!important;
+      }
+      h4 {
+        font-size: 14px;
+        margin: 0;
+      }
+      font-size: 14px;
+    }
+
+    .position-sticky {
+      top: 70px;
+      @media (max-width: 992px) {
+        top: 112px;
+      }
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      &-title {
+        font-size: 16px;
+      }
+
+      &-text {
+        font-size: 14px;
+      }
+
+      .btn {
+        padding: 12px 0!important;
+      }
+    }
+  }
+}

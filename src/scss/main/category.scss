@@ -3,7 +3,14 @@
     @media (max-width: 992px) {
       max-height: 638px;
     }
+    @media (max-width: 768px) {
+      max-height: 400px;
+    }
     transition: max-height 0.5s;
+
+    &_hidden {
+      max-height: 2000px!important;
+    }
   }
 
   &__item {

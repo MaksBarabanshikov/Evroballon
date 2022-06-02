@@ -181,7 +181,43 @@ a {
   }
 }
 
+.nav-link {
+  border-radius: 0!important;
+  padding: 0 18px !important;
+  cursor: pointer;
+  span {
+    padding: 18px 0;
+    display: block;
+    border-bottom: 1px solid #E1F0FE;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &:hover:not(.active) {
+    background-color: rgba(39,163,213,0.5)!important;
+    span {
+      border-color: transparent;
+      color: #181818;
+    }
+  }
+  &.active {
+    background-color: #25A1D3!important;
+    span {
+      border: none;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  &:last-child {
+    span {
+      border-bottom: none;
+    }
+  }
+}
+
 @import "main/*.scss";
 @import "category/*.scss";
 @import "product-card/*.scss";
 @import "article/*.scss";
+@import "priceList/*.scss";

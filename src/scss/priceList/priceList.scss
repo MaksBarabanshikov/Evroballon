@@ -1,0 +1,26 @@
+.price-list {
+  &__tabs {
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 ;
+  }
+
+  &__tab-content {
+    border-radius: 10px;
+  }
+
+  &__table {
+    font-size: 14px !important;
+
+    .row {
+      &:nth-child(2n) {
+        background-color: #E1F0FE;
+      }
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}

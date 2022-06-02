@@ -1,5 +1,6 @@
 html {
   margin-right: calc(-1 * (100vw - 100%));
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -46,20 +47,28 @@ input[type="text"] {
 
 .container {
   @media (min-width: 1400px) {
-    max-width: 1400px;
+    max-width: 1430px;
     font-size: 1rem;
   }
 }
 
-.h3 {
-  font-weight: bold;
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700!important;
 }
 
-.h4 {
+.h3 {
   font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 40px !important;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 20px!important;
+  }
 }
 
 .my-btn_light {
@@ -168,15 +177,10 @@ a {
     }
   }
   &-item {
-    @media (max-width: 575px) {
-      font-size: 14px;
-    }
+    font-size: 12px;
     a {
       color: #000;
-
-      @media (max-width: 575px) {
-        font-size: 14px;
-      }
+      font-size: 12px;
     }
   }
 }

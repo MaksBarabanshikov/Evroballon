@@ -9,6 +9,7 @@ function select() {
             const dropItem = $(this).find('.product-card__price_drop-item')
 
             if (!event.target.closest('.product-card__price_drop-list')) {
+                dropElem.css({"margin-top": "10px"})
                 dropElem.slideToggle()
                 icon.toggleClass('rotate')
             }
@@ -16,6 +17,7 @@ function select() {
             dropItem.click(function () {
                 selected.text($(this).text().trim())
                 icon.removeClass('rotate')
+                dropElem.css({"margin-top": "0px"})
                 dropElem.slideUp()
                 dropItem.off('click')
             })

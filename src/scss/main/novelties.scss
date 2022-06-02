@@ -5,8 +5,10 @@
 
   &__top {
     border-radius: 10px;
+    height: 151px;
     @media(max-width: 992px) {
       background-color: #F3F3F3;
+      height: 129px;
     }
 
     &_discount {
@@ -46,6 +48,8 @@
     }
 
     &_price {
+      font-size: 22px;
+      margin-bottom: 20px!important;
       @media(max-width: 992px) {
         font-size: 14px;
       }
@@ -54,11 +58,13 @@
 
   &__content-btn {
     .btn {
+      height: 50px !important;
       @media (max-width: 1200px) {
         font-size: 14px;
       }
       @media(max-width: 992px) {
         font-size: 12px!important;
+        height: 40px!important;
       }
     }
 

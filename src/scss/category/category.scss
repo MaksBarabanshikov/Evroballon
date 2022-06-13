@@ -160,6 +160,9 @@
     }
 
     &_show {
+      @media (max-width: 992px) {
+        display: none;
+      }
       position: absolute;
       right: -130px;
       top: 200px;
@@ -203,7 +206,6 @@
       padding-bottom: 20px;
     }
   }
-
   &__catalog {
     .my-btn {
       width: 50px;

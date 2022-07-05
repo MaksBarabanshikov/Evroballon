@@ -46,6 +46,9 @@ input[type="text"] {
 }
 
 .container {
+  @media (max-width: 576px) {
+    padding: 0 10px;
+  }
   @media (min-width: 1400px) {
     max-width: 1430px;
     font-size: 1rem;

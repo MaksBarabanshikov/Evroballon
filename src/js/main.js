@@ -8,6 +8,7 @@ import btnCategoryFilter from "./module/btnCategoryFilter"
 import priceListTabs from "./module/priceListTabs"
 import productCardCounter from "./module/productCardCounter";
 import select from "./module/select";
+import accordion from "./module/accordion";
 
 btnDropMenu()
 btnHumb()
@@ -19,3 +20,4 @@ btnCategoryFilter()
 priceListTabs()
 productCardCounter()
 select()
+accordion()

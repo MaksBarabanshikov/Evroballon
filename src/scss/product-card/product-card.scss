@@ -1,6 +1,10 @@
 .product-card {
   &__info {
     border-radius: 9px;
+
+    a {
+      color: #25A1D3;
+    }
   }
 
   &__info_stars {
@@ -118,6 +122,8 @@
 
     &_discount {
       font-size: 20px;
+      text-decoration: line-through;
+      color: #A6B0B9;
       @media (max-width: 1200px) {
         font-size: 16px;
       }
@@ -280,6 +286,15 @@
       }
     }
   }
+
+  &__text-left {
+    word-break: break-all;
+    max-width: 200px;
+  }
+  &__text-right {
+    max-width: 40%;
+  }
+
 
   section {
     h3 {
